@@ -1,0 +1,11 @@
+{
+  "name": "同声译记 离线版",
+  "short_name": "同声译记",
+  "description": "本机语音转写、翻译和 AI 总结",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f6f3",
+  "theme_color": "#17392f",
+  "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
