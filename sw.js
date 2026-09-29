@@ -1,4 +1,4 @@
-const CACHE="tongsheng-offline-shell-v6";
+const CACHE="tongsheng-offline-shell-v7";
 const CDN_CACHE="tongsheng-offline-cdn-v1";
 const CORE=["./","./index.html","./style.css","./app.js","./manifest.webmanifest","./icon.svg"];
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE.map(p=>new URL(p,self.registration.scope).href))).then(()=>self.skipWaiting())));
