@@ -5,7 +5,7 @@
 ## 使用条件
 - 支持 WebGPU 的最新版 Safari；建议更新到设备可用的最新 iOS/iPadOS。页面会检查 HTTPS、WebGPU 和麦克风能力并提示问题。
 - 手机和平板需要发布后的 HTTPS 网站地址。电脑上的 localhost 只代表电脑本身，不能在手机上直接使用；在手机地址栏输入 localhost 会指向手机自身。
-- 首次打开要联网，下载 Whisper Small 多语种语音识别模型和 Qwen 2.5 1.5B 本机语言模型，合计约 2 GB 以上。请预留存储空间并连 Wi‑Fi。
+- 首次打开要联网，iPhone/iPad 使用较轻的 Whisper Tiny 和 Qwen2.5 0.5B 模型（约 1 GB 以上）；电脑继续使用 Whisper Small 和 Qwen2.5 1.5B（约 2 GB 以上）。请预留存储空间并连 Wi‑Fi。
 - 下载后可尝试离线使用。Safari 可能清理长期未访问网站的缓存；录音和处理时保持页面在前台。
 - 更大的本机模型有助于提升马来语、英语、中文识别和总结质量，但不能保证零错误，特别是口音、噪声和专业术语场景；重要内容请课后核对。
 
@@ -14,8 +14,8 @@
 发布后，在 iPhone/iPad 用 Safari 打开 HTTPS 地址，首次联网点“下载并准备模型”。完成后选择“分享”→“添加到主屏幕”。
 
 ## 模型与数据
-- ASR: `onnx-community/whisper-small` via Transformers.js WebGPU.
-- Translation / summary: `Qwen2.5-1.5B-Instruct-q4f16_1-MLC` via WebLLM.
+- iPhone/iPad ASR: `onnx-community/whisper-tiny`; desktop ASR: `onnx-community/whisper-small` via Transformers.js WebGPU.
+- iPhone/iPad translation / summary: `Qwen2.5-0.5B-Instruct-q4f16_1-MLC`; desktop: `Qwen2.5-1.5B-Instruct-q4f16_1-MLC` via WebLLM. Mobile models use less memory but may be less capable.
 - 第一次加载时模型权重从公开模型仓库下载并存入浏览器缓存；用户录音不发送到服务器。访问静态网页和下载模型本身仍需网络。
 
 长课程逐字稿以时间点分段保存在本机浏览器，可导出为 TXT；支持暂停/继续。总结会分段处理全文，再汇总成详细复习笔记。长时间录音请保持 Safari 网页前台打开并防止设备自动锁屏。
