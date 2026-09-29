@@ -1,5 +1,6 @@
-const ASR_MODEL="onnx-community/whisper-small";
-const LLM_MODEL="Qwen2.5-1.5B-Instruct-q4f16_1-MLC";
+const IS_APPLE_MOBILE=/iPhone|iPad|iPod/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+const ASR_MODEL=IS_APPLE_MOBILE?"onnx-community/whisper-tiny":"onnx-community/whisper-small";
+const LLM_MODEL=IS_APPLE_MOBILE?"Qwen2.5-0.5B-Instruct-q4f16_1-MLC":"Qwen2.5-1.5B-Instruct-q4f16_1-MLC";
 const DRAFT_KEY="tongshengyiji-lecture-draft-v2";
 const SEGMENT_MS=10000;
 const $=id=>document.getElementById(id);
